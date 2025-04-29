@@ -15,7 +15,8 @@ class AccountMove(models.Model):
         comodel_name="stock.picking",
         string="Related Pickings",
         store=True,
-        compute="_compute_picking_ids",
+        # TODO remove for avoid recompute upgrade
+        # compute="_compute_picking_ids",
         help="Related pickings (only when the invoice has been generated from a sale "
         "order).",
     )
